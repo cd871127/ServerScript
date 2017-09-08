@@ -11,8 +11,6 @@ project_name=CarbonMiao
 build_dir=/home/cdistc/build/$project_name
 deploy_dir=/home/cdistc/app/$project_name
 
-echo build_dir
-exit
 cd $build_dir
 git pull origin master
 
