@@ -24,7 +24,7 @@ $shell_dir/close_process.sh node
 #backup
 mv $deploy_dir/$project_name $deploy_dir/$project_name.$datetime
 
-cp build $deploy_dir/$project_name
+mv build $deploy_dir/$project_name
 
 `serve -s $deploy_dir/$project_name >> $deploy_dir/$project_name.log 2>&1 &`
 
