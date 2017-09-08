@@ -26,6 +26,6 @@ mv $deploy_dir/$project_name.jar $deploy_dir/$project_name.jar.$datetime
 
 cp build/libs/*.jar $deploy_dir/$project_name.jar
 
-`java -jar $deploy_dir/$project_name.jar >> $deploy_dir/$project_name.log > 2>&1 &`
+`java -jar $deploy_dir/$project_name.jar >> $deploy_dir/$project_name.log 2>&1 &`
 
 
