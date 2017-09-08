@@ -26,7 +26,7 @@ mv $deploy_dir/$project_name/ $deploy_dir/$project_name.$datetime/
 
 mv build $deploy_dir/$project_name
 
-`serve -s $deploy_dir/$project_name >> $deploy_dir/$project_name.log 2>&1 &`
+`serve -s -C $deploy_dir/$project_name >> $deploy_dir/$project_name.log 2>&1 &`
 
 
 
