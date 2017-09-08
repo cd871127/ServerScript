@@ -13,12 +13,12 @@ deploy_dir=/home/cdistc/app/$project_name
 
 echo build_dir
 exit
-cd build_dir
+cd $build_dir
 git pull origin master
 
 gradle clean
 gradle bootRepackage
 
-cp libs/*.jar deploy_dir
+cp libs/*.jar $deploy_dir
 
 
