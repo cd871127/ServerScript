@@ -10,7 +10,7 @@ project_name=$1
 build_dir=/home/cdistc/build/$project_name
 deploy_dir=/home/cdistc/app/$project_name
 shell_dir=/home/cdistc/app/shell
-datetime=date +%s
+datetime=`date +%s`
 
 cd $build_dir
 git pull origin master
@@ -26,6 +26,6 @@ mv $deploy_dir/$project_name.jar $deploy_dir/$project_name.jar.$datetime
 
 cp build/libs/*.jar $deploy_dir/$project_name.jar
 
-#java -jar $deploy_dir/$project_name.jar >> $deploy_dir/$project_name.log > 2>&1 &
+`java -jar $deploy_dir/$project_name.jar >> $deploy_dir/$project_name.log > 2>&1 &`
 
 
