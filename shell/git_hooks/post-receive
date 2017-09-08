@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+project_name="CarbonMiao"
+target_branch="master"
+
+working_tree="PATH_TO_DEPLOY"
+
+while read oldrev newrev refname
+do
+    branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+    if [ -n "$branch" ] && [ "$target_branch" == "$branch" ]; then
+		#excute build script
+		$project_name.sh
+	
+       #excute deploy script
+    fi
+done
