@@ -22,7 +22,7 @@ npm run build
 $shell_dir/close_process.sh node
 
 #backup
-mv $deploy_dir/$project_name $deploy_dir/$project_name.$datetime
+mv $deploy_dir/$project_name/ $deploy_dir/$project_name.$datetime/
 
 mv build $deploy_dir/$project_name
 
