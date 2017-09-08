@@ -19,7 +19,7 @@ gradle clean
 gradle bootRepackage
 
 #shutdown the service
-./close_process.sh java
+$shell_dir/close_process.sh java
 
 #backup
 mv $deploy_dir/$project_name.jar $deploy_dir/$project_name.jar.$datetime
